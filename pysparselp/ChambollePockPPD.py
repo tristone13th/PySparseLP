@@ -282,37 +282,37 @@ def chambolle_pock_ppd(
                 max_violated_equality_rounded = 0
             max_violated_inequality = np.max(a_ineq * x_rounded - b_ineq)
             if max_violated_equality_rounded == 0 and max_violated_inequality <= 0:
-                print(
-                    "##########   found feasible solution with energy"
-                    + str(energy_rounded)
-                )
+                # print(
+                #     "##########   found feasible solution with energy"
+                #     + str(energy_rounded)
+                # )
                 if energy_rounded < best_integer_solution_energy:
                     best_integer_solution_energy = energy_rounded
                     best_integer_solution = x_rounded
 
-            print(
-                "iter"
-                + str(niter)
-                + ": energy1= "
-                + str(energy1)
-                + " energy2="
-                + str(energy2)
-                + " elapsed "
-                + str(elapsed)
-                + " second"
-                + " max violated inequality:"
-                + str(max_violated_inequality)
-                + " max violated equality:"
-                + str(max_violated_equality)
-                + " x3 has "
-                + str(100 * np.mean(x3 == 0))
-                + " % of zeros "
-                + "diff x3 has "
-                + str(100 * np.mean(diff_x3 == 0))
-                + " % of zeros "
-                + "mean_iter_period="
-                + str(mean_iter_period)
-            )
+            # print(
+            #     "iter"
+            #     + str(niter)
+            #     + ": energy1= "
+            #     + str(energy1)
+            #     + " energy2="
+            #     + str(energy2)
+            #     + " elapsed "
+            #     + str(elapsed)
+            #     + " second"
+            #     + " max violated inequality:"
+            #     + str(max_violated_inequality)
+            #     + " max violated equality:"
+            #     + str(max_violated_equality)
+            #     + " x3 has "
+            #     + str(100 * np.mean(x3 == 0))
+            #     + " % of zeros "
+            #     + "diff x3 has "
+            #     + str(100 * np.mean(diff_x3 == 0))
+            #     + " % of zeros "
+            #     + "mean_iter_period="
+            #     + str(mean_iter_period)
+            # )
             # 'y_eq has '+str(100 * np.mean(y_eq==0))+' % of zeros '+\
             #    'y_ineq has '+str(100 * np.mean(y_ineq==0))+' % of zeros '+\
 
